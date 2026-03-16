@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI in Other Fields</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+<style>
+/* ===== RESET & BASE ===== */
+* {margin:0; padding:0; box-sizing:border-box;}
+body {font-family:'Tajawal', sans-serif; background: linear-gradient(135deg, #0a192f 0%, #1a3a5d 100%); color:#cfd8dc; line-height:1.6; overflow-x:hidden; padding-top: 85px;}
+.container {max-width:1200px; margin:0 auto; padding:0 20px;}
+
+/* ===== HEADER ===== */
+.header{
+    background-image: url(f6.jpg);
+    background-repeat:no-repeat;
+    background-position: center center;
+    background-size: 1510px;
+    position:relative;
+    padding:90px 0 80px;
+    text-align:center;
+    overflow:hidden;
+    border-radius:0 0 20px 20px;
+}
+.header h1 {
+    font-size:3.5rem; font-weight:800; margin-bottom:24px; color:#fff;
+    text-shadow:0 0 4px  rgb(3, 36, 44) ;
+}
+
+/* ===== SECTION ===== */
+.section {padding:80px 0;}
+.section-title {text-align:center; margin-bottom:60px; font-size:3.5rem; color:#fff; text-shadow:0 0 10px #00ff8014,0 0 20px #00ff8072;}
+.section-subtitle {font-size:1.1rem; margin-bottom:3rem; color:#cfd8dc; text-align:center;}
+
+/* ===== APPLICATION CARDS ===== */
+.applications-grid {display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-bottom:40px;}
+.app-box-horizontal {display:flex; background: rgba(255,255,255,0.05); padding:1rem; border-radius:15px; width:100%; min-height:180px; align-items:flex-start; text-align:left; position:relative; cursor:pointer; transition: transform 0.3s ease, box-shadow 0.3s ease; overflow:hidden;}
+.app-box-horizontal::before {content:''; position:absolute; top:0; left:0; width:5px; height:100%; background:linear-gradient(to bottom,#ff6b6b,#4ecdc4); transition:width 0.3s ease; border-radius:15px 0 0 15px;}
+.app-box-horizontal:hover::before {width:10px;}
+.app-box-horizontal:hover {transform:translateY(-5px); box-shadow:0 10px 30px rgba(255,107,107,0.2);}
+.app-icon {width:50px;height:50px;background:rgba(78,205,196,0.2); border:2px solid #4ecdc4; border-radius:12px; display:flex; justify-content:center; align-items:center; font-size:1.8rem; color:#ffd700; margin-right:0.8rem; flex-shrink:0; transition:transform 0.3s ease, box-shadow 0.3s ease;}
+.app-box-horizontal:hover .app-icon {transform:scale(1.2); box-shadow:0 0 15px #4ecdc4;}
+.app-content h3.mustard {margin:0 0 0.2rem 0; font-size:1rem; color:#ffd700;}
+.app-content p {margin:0; color:#cfd8dc; font-size:0.78rem; line-height:1.5;}
+
+/* ===== IMAGE PLACEHOLDER ===== */
+.app-image {margin-top:10px;}
+.app-image img {
+    width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* ===== NAVBAR ===== */
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(10,25,47,0.95);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* LOGO */
+.logo {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: linear-gradient(45deg,#ff6b6b,#4ecdc4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0 0 15px rgba(255,107,107,0.6);
+}
+
+/* LINKS */
+.nav-links a {
+    color: #e6f1ff;
+    text-decoration: none;
+    margin-left: 15px;
+    padding: 8px 16px;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    background: linear-gradient(45deg,#ff6b6b,#4ecdc4);
+    color: white;
+    box-shadow: 0 0 15px rgba(255,107,107,0.5);
+}
+
+/* ===== FOOTER ===== */
+.footer {padding:48px 0; text-align:center; border-top:1px solid rgba(207,216,220,0.1);}
+.footer p {color:#cfd8dc; font-size:1rem;}
+
+/* ===== MEDIA ===== */
+@media(max-width:768px){.applications-grid{grid-template-columns:1fr;}}
+@media(max-width:480px){.section{padding:60px 0;}.section-title{font-size:2rem;}}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="container">
+        <h1>AI in Other Fields</h1>
+    </div>
+</header>
+ <nav class="nav">
+       <!---- LEFT : LOGO + NAME -->
+        <div class="nav-left">
+        <img src="C:\Users\Assmaa\Downloads\WhatsApp Image 2025-12-08 at 18.59.26_e070c9bc.jpg" alt="Logo" class="logo">
+        <span class="brand">AI Tech</span>
+    </div>
+        </div>
+
+         <!--RIGHT : LINKS -->
+       <div class="nav-links">
+             <a href="Project.html">Home</a>
+             <a href="project.html#ai">About AI</a>
+            <a href="project.html#applications">Applications</a>
+            <a href="project.html#fields" >AI Fields</a>
+            <a href="Courses.html">Courses</a>
+            <a href="project.html#contact">Contact</a>
+        </div>
+    </nav>
+
+<!-- APPLICATIONS -->
+<section class="section" id="applications">
+    <div class="container">
+        <div class="section-title">Applications of AI</div>
+        
+        <div class="applications-grid">
+
+            <!-- 1. Climate & Environment -->
+            <div class="app-box-horizontal">
+                <div class="app-icon">🌍</div>
+                <div class="app-content">
+                    <h3 class="mustard">Climate & Environment</h3>
+                    <p>AI analyzes climate data, predicts weather extremes, and models greenhouse gas emissions. It optimizes renewable energy, detects deforestation using drones, and monitors pollution. Cities and governments rely on AI for flood prediction, heatwave alerts, and sustainable urban planning, while researchers use AI for biodiversity and ecosystem modeling.</p>
+                    <div class="app-image">
+                        <img src="E:\IS_Project\project\f1.jpg" alt="Climate & Environment">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Space Exploration -->
+            <div class="app-box-horizontal">
+                <div class="app-icon">🚀</div>
+                <div class="app-content">
+                    <h3 class="mustard">Space Exploration</h3>
+                    <p>AI guides autonomous rovers, processes satellite imagery, and detects anomalies in spacecraft systems. It helps analyze data from telescopes, identify exoplanets, and optimize mission plans. AI also simulates cosmic events and supports autonomous navigation in space, reducing risks and improving mission efficiency.</p>
+                    <div class="app-image">
+                        <img src="E:\IS_Project\project\f2.jpg" alt="Space Exploration">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Smart Cities -->
+            <div class="app-box-horizontal">
+                <div class="app-icon">🏙</div>
+                <div class="app-content">
+                    <h3 class="mustard">Smart Cities</h3>
+                    <p>AI optimizes traffic, reduces energy consumption, and manages public services. Smart sensors monitor air quality, waste management, and public safety. AI-driven analytics improve city planning, resource allocation, and citizen engagement. Predictive maintenance of infrastructure and intelligent street lighting increase efficiency.</p>
+                    <div class="app-image">
+                        <img src="E:\IS_Project\project\f3.jpg" alt="Smart Cities">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Art & Creativity -->
+            <div class="app-box-horizontal">
+                <div class="app-icon">🎨</div>
+                <div class="app-content">
+                    <h3 class="mustard">Art & Creativity</h3>
+                    <p>AI assists in music, visual arts, design, and creative writing. Generative models produce new artworks, while AI editing tools help artists refine their projects. AI can create immersive experiences in gaming, virtual reality, and interactive media, enhancing creativity and innovation in the arts.</p>
+                    <div class="app-image">
+                        <img src="E:\IS_Project\project\f4.jpg" alt="Art & Creativity">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. Sports & Fitness -->
+            <div class="app-box-horizontal">
+                <div class="app-icon">🏋</div>
+                <div class="app-content">
+                    <h3 class="mustard">Sports & Fitness</h3>
+                    <p>AI tracks athletes’ performance, predicts injuries, and provides personalized training programs. Wearable devices collect data, analyzed by AI for optimized workouts. AI also assists in strategy planning, match analysis, and improving techniques, while supporting fans with predictive statistics.</p>
+                    <div class="app-image">
+                        <img src="E:\IS_Project\project\f5.jpg" alt="Sports & Fitness">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. Human-Computer Interaction -->
+            <div class="app-box-horizontal">
+                <div class="app-icon">💻</div>
+                <div class="app-content">
+                    <h3 class="mustard">Human-Computer Interaction</h3>
+                    <p>AI improves interfaces with voice, gesture, and facial recognition. It enables adaptive software, smarter virtual assistants, and more intuitive interactions. Applications include accessibility for differently-abled users, augmented reality, and AI-powered user experience enhancement.</p>
+                    <div class="app-image">
+                        <img src="E:\IS_Project\project\f6.jpg" alt="Human-Computer Interaction">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7. Disaster Management -->
+            <div class="app-box-horizontal">
+                <div class="app-icon">🌪</div>
+                <div class="app-content">
+                    <h3 class="mustard">Disaster Management</h3>
+                    <p>AI predicts natural disasters such as floods, earthquakes, and hurricanes. It helps emergency response, allocates resources efficiently, and guides evacuation plans. AI analyzes satellite and sensor data for early warnings, enabling governments and NGOs to save lives and reduce damage.</p>
+                    <div class="app-image">
+                        <img src="E:\IS_Project\project\f7.jpg" alt="Disaster Management">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8. Social Media Analysis -->
+            <div class="app-box-horizontal">
+                <div class="app-icon">📱</div>
+                <div class="app-content">
+                    <h3 class="mustard">Social Media Analysis</h3>
+                    <p>AI monitors trends, sentiment, and public opinion. It detects misinformation, enhances user engagement, and provides marketing insights. Companies use AI to personalize content, analyze campaigns, and understand social dynamics globally and locally.</p>
+                    <div class="app-image">
+                        <img src="E:\IS_Project\project\f8.jpg" alt="Social Media Analysis">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 9. Personalized Nutrition -->
+            <div class="app-box-horizontal">
+                <div class="app-icon">🥗</div>
+                <div class="app-content">
+                    <h3 class="mustard">Personalized Nutrition</h3>
+                    <p>AI recommends diets based on health data, genetics, and preferences. Nutrition apps track caloric intake, monitor health metrics, and suggest optimized meal plans. AI also supports chronic disease management and promotes healthy lifestyle changes.</p>
+                    <div class="app-image">
+                        <img src="E:\IS_Project\project\f9.jpg" alt="Personalized Nutrition">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 10. Wildlife Conservation -->
+            <div class="app-box-horizontal">
+                <div class="app-icon">🐾</div>
+                <div class="app-content">
+                    <h3 class="mustard">Wildlife Conservation</h3>
+                    <p>AI tracks endangered species, monitors habitats, and predicts ecological changes. Drones and camera traps feed data to AI for anti-poaching measures and habitat protection. Machine learning models guide conservation strategies, biodiversity studies, and ecological restoration projects.</p>
+                    <div class="app-image">
+                        <img src="E:\IS_Project\project\f10.jpg" alt="Wildlife Conservation">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2025 AI in Other Fields. All Rights Reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,256 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI',sans-serif;
+}
+
+body{
+  background:#0a192f;
+  color:#e6f1ff;
+}
+
+/* ===== NAVBAR ===== */
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(10,25,47,0.95);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* LOGO */
+.logo {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: linear-gradient(45deg,#ff6b6b,#4ecdc4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0 0 15px rgba(255,107,107,0.6);
+}
+
+/* LINKS */
+.nav-links a {
+    color: #e6f1ff;
+    text-decoration: none;
+    margin-left: 15px;
+    padding: 8px 16px;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    background: linear-gradient(45deg,#ff6b6b,#4ecdc4);
+    color: white;
+    box-shadow: 0 0 15px rgba(255,107,107,0.5);
+}
+
+
+/* HEADER */
+.header{
+  text-align:center;
+  padding:80px 20px 40px;
+}
+
+.header h1{
+  font-size:3rem;
+  color:white;
+  text-shadow:0 0 12px #4ade80;
+}
+
+.desc{
+  max-width:800px;
+  margin:20px auto;
+  color:#cfd8dc;
+  line-height:1.8;
+}
+
+/* TABLE */
+.courses-section{
+  display:flex;
+  justify-content:center;
+  padding-bottom:80px;
+}
+
+.courses-table{
+  width:90%;
+  max-width:900px;
+  border-collapse:collapse;
+  background:rgba(255,255,255,0.05);
+  border-radius:15px;
+  overflow:hidden;
+}
+
+th,td{
+  padding:16px;
+  border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+th{
+  color:#ffd700;
+  background:rgba(255,107,107,0.1);
+  text-align:left;
+}
+
+.hover{
+  transition:.3s;
+  cursor:pointer;
+}
+
+.hover:hover{
+  color:#4ecdc4;
+  text-shadow:0 0 10px #4ecdc4;
+}
+
+/* BUTTON */
+button{
+  background:linear-gradient(45deg,#ff6b6b,#4ecdc4);
+  border:none;
+  padding:8px 20px;
+  border-radius:20px;
+  color:white;
+  cursor:pointer;
+  font-weight:600;
+  transition:.3s;
+}
+
+button:hover{
+  box-shadow:0 0 15px rgba(255,107,107,.6);
+  transform:scale(1.05);
+}
+
+/* FORM */
+.form-popup{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.8);
+  justify-content:center;
+  align-items:center;
+}
+
+.form-content{
+  background:#0a192f;
+  padding:30px;
+  width:90%;
+  max-width:400px;
+  border-radius:15px;
+  box-shadow:0 0 30px rgba(255,107,107,0.5);
+  position:relative;
+}
+
+.form-content h2{
+  text-align:center;
+  margin-bottom:20px;
+}
+
+.form-content input,
+.form-content select{
+  width:100%;
+  padding:10px;
+  margin:8px 0;
+  border-radius:8px;
+  border:1px solid #4ecdc4;
+  background:rgba(255,255,255,0.05);
+  color:white;
+}
+
+.close{
+  position:absolute;
+  top:10px;
+  right:15px;
+  color:#ff6b6b;
+  cursor:pointer;
+  font-size:20px;
+}
+/* ===== SUBSCRIPTION PLANS ===== */
+.plans-section{
+  padding:80px 20px;
+  text-align:center;
+}
+
+.plans-title{
+  font-size:2.5rem;
+  color:#ffffff;
+  text-shadow:0 0 10px #4ade80;
+}
+
+.plans-desc{
+  max-width:700px;
+  margin:15px auto 40px;
+  color:#cfd8dc;
+  line-height:1.7;
+}
+
+.plans-box{
+  display:flex;
+  gap:30px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.plan-card{
+  background:rgba(255,255,255,0.05);
+  padding:30px;
+  width:280px;
+  border-radius:16px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+  transition:0.3s;
+  position:relative;
+  border:1px solid rgba(255,255,255,0.1);
+}
+
+.plan-card h3{
+  color:#ffd700;
+  margin-bottom:15px;
+}
+
+.plan-card p{
+  color:#cfd8dc;
+  margin:6px 0;
+}
+
+.plan-card .price{
+  display:block;
+  margin:15px 0;
+  font-size:1.2rem;
+  color:#4ecdc4;
+  font-weight:600;
+}
+
+.plan-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 0 25px rgba(255,107,107,0.4);
+}
+
+/* Highlight popular plan */
+.plan-card.popular::before{
+  content:"Most Popular";
+  position:absolute;
+  top:-12px;
+  left:50%;
+  transform:translateX(-50%);
+  background:linear-gradient(45deg,#ff6b6b,#4ecdc4);
+  color:#fff;
+  padding:5px 15px;
+  border-radius:20px;
+  font-size:0.8rem;
+}

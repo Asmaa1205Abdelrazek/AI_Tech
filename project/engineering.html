@@ -1,0 +1,1213 @@
+
+<!DOCTYPE html>  <html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Inspiring AI Engineering</title>  
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">  
+      <script src="element.js"></script>
+    <style>  
+        * {  
+            margin: 0;  
+            padding: 0;  
+            box-sizing: border-box;  
+        }  body {  
+            padding-top: 85px;
+        font-family: 'Inter', sans-serif;  
+        background: linear-gradient(135deg, #0a192f 0%, #1a3a5d 100%);  
+        color: #ffffff;  
+        line-height: 1.6;  
+        overflow-x: hidden;  
+    }  
+    
+/* ===== NAVBAR ===== */
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(10,25,47,0.95);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* LOGO */
+.logo {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: linear-gradient(45deg,#ff6b6b,#4ecdc4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0 0 15px rgba(255,107,107,0.6);
+}
+
+/* LINKS */
+.nav-links a {
+    color: #e6f1ff;
+    text-decoration: none;
+    margin-left: 15px;
+    padding: 8px 16px;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    background: linear-gradient(45deg,#ff6b6b,#4ecdc4);
+    color: white;
+    box-shadow: 0 0 15px rgba(255,107,107,0.5);
+}
+
+
+    .container {  
+        max-width: 1200px;  
+        margin: 0 auto;  
+        padding: 0 20px;  
+    }  
+
+    /* Header Styles */  
+    .header {  
+        position: relative;  
+        padding: 35px 0 80px;  
+        text-align: center;  
+        overflow: hidden;
+        border-radius: 0 0 15px 15px;
+        background-image: url(ren.jpg) ; 
+        background-repeat: no-repeat; 
+        background-size:1510px ;
+        background-position: center center;
+    }  
+
+
+    .ai-icon {  
+        width: 80px;  
+        height: 80px;  
+        background: linear-gradient(135deg, #ff6b6b, #4ecdc4);  
+        border-radius: 50%;  
+        display: flex;  
+        align-items: center;  
+        justify-content: center;  
+        margin: 0 auto 40px;  
+        box-shadow: 0 0 30px rgba(0, 255, 127, 0.3);  
+        border: 2px solid #00ff7f;  
+        
+    }  
+
+    .ai-icon svg {  
+        width: 40px;  
+        height: 40px;  
+        fill: white;  
+    }  
+
+    .header h1 {  
+        font-size: 3.5rem;  
+        font-weight: 800;  
+        margin-bottom: 24px;  
+        color: #ffffff;  
+        text-shadow: 0 0 10px #00ff7f, 0 0 20px #00ff7f;  
+    }  
+
+    .header p {  
+        font-size: 1.5rem;  
+        color: #cfd8dc;  
+        max-width: 700px;  
+        margin: 0 auto;  
+        line-height: 1.8;  
+    }  
+
+    /* Section Styles */  
+    .section {  
+        padding: 80px 0;  
+    }  
+
+    .section-title {  
+        text-align: center;  
+        margin-bottom: 60px;  
+    }  
+
+    .title-glow {  
+        font-size: 2.5rem;  
+        margin-bottom: 1rem;  
+        color: #fff;  
+        text-align: center;  
+        text-shadow: 0 0 10px #00ff807d, 0 0 20px #00ff806b;  
+    }  
+
+    .section-subtitle {   
+        font-size: 1.1rem;   
+        margin-bottom: 3rem;  
+        color:#cfd8dc;  
+        text-align: center;  
+    }  
+
+    /* Hero Quote */  
+    .hero-quote {  
+        background: linear-gradient(135deg, rgba(10, 25, 47, 0.8), rgba(26, 58, 93, 0.8));  
+        border: 1px solid rgba(207, 216, 220, 0.1);  
+        border-radius: 24px;  
+        padding: 60px;  
+        text-align: center;  
+        margin: 40px 0;  
+        position: relative;  
+        overflow: hidden;  
+    }  
+
+    .hero-quote::before {  
+        content: '"';  
+        position: absolute;  
+        top: 20px;  
+        left: 20px;  
+        font-size: 8rem;  
+        color: rgba(0, 255, 127, 0.1);  
+        font-family: serif;  
+        line-height: 1;  
+    }  
+
+    .hero-quote p {  
+        font-size: 1.5rem;  
+        font-style: italic;  
+        color: #cfd8dc;  
+        margin-bottom: 20px;  
+        position: relative;  
+        z-index: 1;  
+    }  
+
+    .hero-quote .author {  
+        color: #ffd700;  
+        font-weight: 600;  
+        font-size: 1.1rem;  
+    }  
+
+    /* Introduction Section */  
+    .intro-content {  
+        display: grid;  
+        grid-template-columns: 1fr 1fr;  
+        gap: 60px;  
+        align-items: center;  
+    }
+
+.intro-text h2 {
+font-size: 2.25rem;
+font-weight: 700;
+margin-bottom: 24px;
+color: #ffffff;
+text-shadow: 0 0 10px #00ff8064, 0 0 20px #00ff8070;
+}
+
+.intro-text p {  
+        font-size: 1.125rem;  
+        color: #cfd8dc;  
+        margin-bottom: 20px;  
+        line-height: 1.8;  
+    }  
+
+    .components-card {  
+        background: rgba(255,255,255,0.05);  
+        border: 1px solid rgba(207,216,220,0.1);  
+        border-radius: 16px;  
+        padding: 32px;  
+        background-image: url(eeng.jpg);
+        background-repeat: no-repeat;
+        background-position: right center;
+        background-size: 300px;
+        background-clip:border-box;
+    
+    }  
+
+    .components-card h3 {  
+        display: flex;  
+        align-items: center;  
+        font-size: 1.25rem;  
+        font-weight: 600;  
+        margin-bottom: 20px;  
+        color: #ffd700;  
+    }  
+
+    .components-card h3 svg {  
+        margin-left: 12px;  
+        width: 24px;  
+        height: 24px;  
+        fill: #4ecdc4;  
+        stroke: #4ecdc4;  
+        stroke-width: 2;  
+    }  
+
+    .components-list {  
+        list-style: none;  
+    }  
+
+    .components-list li {  
+        display: flex;  
+        align-items: center;  
+        margin-bottom: 12px;  
+        color: #cfd8dc;  
+        font-size: 1rem;  
+    }  
+
+    .components-list li::before {  
+        content: '';  
+        width: 8px;  
+        height: 8px;  
+        background: linear-gradient(135deg, #ff6b6b, #4ecdc4);  
+        border-radius: 50%;  
+        margin-left: 12px;  
+    }  
+
+    /* Inspiration Gallery */  
+    .inspiration-section {  
+        padding: 80px 0;  
+    }  
+
+    .gallery {  
+        display: grid;  
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));  
+        gap: 30px;  
+        margin-top: 40px;  
+    }  
+
+    .gallery-item {  
+        background: rgba(255,255,255,0.05);  
+        border: 1px solid rgba(207,216,220,0.1);  
+        border-radius: 16px;  
+        overflow: hidden;  
+        transition: all 0.3s ease;  
+    }  
+
+    .gallery-item:hover {  
+        transform: translateY(-5px);  
+        box-shadow: 0 10px 30px rgba(255,107,107,0.2);  
+        border-color: rgba(0, 255, 127, 0.3);  
+    }  
+
+    .gallery-image1 {  
+        width: 100%;  
+        height: 200px;  
+        background: linear-gradient(45deg, #2a3a5a, #3a4a6a);  
+        display: flex;  
+        align-items: center;  
+        justify-content: center;  
+        position: relative;  
+        overflow: hidden;
+         background-image:url(eng2.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;   
+    }  
+
+
+    .gallery-image1::before {  
+        content: '';  
+        position: absolute;  
+        top: 0;  
+        left: 0;  
+        right: 0;  
+        bottom: 0;  
+        background: linear-gradient(45deg, #ff6b6b, #4ecdc4);  
+        opacity: 0.2;  
+    }  
+
+    .gallery-image1 svg {  
+        width: 60px;  
+        height: 60px;  
+        fill: rgba(255, 255, 255, 0.7);  
+        z-index: 1;  
+    }  
+    .gallery-image2 {  
+        width: 100%;  
+        height: 200px;  
+        background: linear-gradient(45deg, #2a3a5a, #3a4a6a);  
+        display: flex;  
+        align-items: center;  
+        justify-content: center;  
+        position: relative;  
+        overflow: hidden;
+         background-image:url(eng3.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;   
+    }  
+
+
+    .gallery-image2::before {  
+        content: '';  
+        position: absolute;  
+        top: 0;  
+        left: 0;  
+        right: 0;  
+        bottom: 0;  
+        background: linear-gradient(45deg, #ff6b6b, #4ecdc4);  
+        opacity: 0.2;  
+    }  
+
+    .gallery-image2 svg {  
+        width: 60px;  
+        height: 60px;  
+        fill: rgba(255, 255, 255, 0.7);  
+        z-index: 1;  
+    }  
+    .gallery-image3 {  
+        width: 100%;  
+        height: 200px;  
+        background: linear-gradient(45deg, #2a3a5a, #3a4a6a);  
+        display: flex;  
+        align-items: center;  
+        justify-content: center;  
+        position: relative;  
+        overflow: hidden;
+         background-image:url(educ1.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;   
+    }  
+
+
+    .gallery-image3::before {  
+        content: '';  
+        position: absolute;  
+        top: 0;  
+        left: 0;  
+        right: 0;  
+        bottom: 0;  
+        background: linear-gradient(45deg, #ff6b6b, #4ecdc4);  
+        opacity: 0.2;  
+    }  
+
+    .gallery-image3 svg {  
+        width: 60px;  
+        height: 60px;  
+        fill: rgba(255, 255, 255, 0.7);  
+        z-index: 1;  
+    }  
+
+    .gallery-content {  
+        padding: 24px;  
+    }  
+
+    .gallery-content h3 {  
+        color: #ffd700;  
+        font-size: 1.25rem;  
+        margin-bottom: 12px;  
+        font-weight: 700;  
+    }  
+
+    .gallery-content p {  
+        color: #cfd8dc;  
+        font-size: 0.95rem;  
+        line-height: 1.6;  
+        margin-bottom: 16px;  
+    }  
+
+    .gallery-content .insight {  
+        background: rgba(78, 205, 196, 0.1);  
+        border-left: 3px solid #4ecdc4;  
+        padding: 12px;  
+        font-size: 0.85rem;  
+        color: #cfd8dc;  
+        border-radius: 0 8px 8px 0;  
+    }  
+
+    /* AI Engineering Types */  
+    .ai-types {  
+        display: grid;  
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));  
+        gap: 24px;  
+    }
+
+.ai-card {
+background: rgba(255,255,255,0.05);
+border: 1px solid rgba(207,216,220,0.1);
+border-radius: 16px;
+padding: 24px;
+text-align: center;
+transition: all 0.3s ease;
+cursor: pointer;
+position: relative;
+overflow: hidden;
+}
+.ai-card::before {
+content:'';
+position:absolute;
+top:0; left:0;
+width:5px; height:100%;
+background: linear-gradient(to bottom,#ff6b6b,#4ecdc4);
+transition: width 0.3s ease;
+border-radius: 16px 0 0 16px;
+}
+
+.ai-card:hover::before { width:10px; }  
+    .ai-card:hover { transform:translateY(-5px); box-shadow:0 10px 30px rgba(255,107,107,0.2); }  
+
+    .ai-icon-large {  
+        width: 48px;  
+        height: 48px;  
+        background: rgba(78,205,196,0.2);  
+        border: 2px solid #4ecdc4;  
+        border-radius: 12px;  
+        display: flex;  
+        justify-content: center;  
+        align-items: center;  
+        font-size: 1.8rem;  
+        color: #ffd700;  
+        margin: 0 auto 16px;  
+        transition: transform 0.3s ease, box-shadow 0.3s ease;  
+    }  
+
+    .ai-card:hover .ai-icon-large {  
+        transform: scale(1.2);  
+        box-shadow: 0 0 15px #4ecdc4;  
+    }  
+
+    .ai-card h3 {  
+        font-size: 1.25rem;  
+        font-weight: 700;  
+        margin-bottom: 12px;  
+        color: #ffd700;  
+    }  
+
+    .ai-card p {  
+        font-size: 0.95rem;  
+        color: #cfd8dc;  
+        margin-bottom: 16px;  
+        line-height: 1.6;  
+    }  
+
+    .stats {  
+        display: flex;  
+        justify-content: center;  
+        gap: 8px;  
+        flex-wrap: wrap;  
+    }  
+
+    .stat-badge {  
+        background: rgba(78,205,196,0.2);  
+        color: #cfd8dc;  
+        padding: 4px 12px;  
+        border-radius: 20px;  
+        font-size: 0.75rem;  
+        font-weight: 500;  
+        border: 1px solid rgba(78,205,196,0.3);  
+    }  
+
+    /* Timeline */  
+    .timeline {  
+        position: relative;  
+        max-width: 800px;  
+        margin: 0 auto;  
+    }  
+
+    .timeline::before {  
+        content: '';  
+        position: absolute;  
+        left: 50%;  
+        top: 0;  
+        bottom: 0;  
+        width: 2px;  
+        background: linear-gradient(to bottom, #00ff7f, #4ecdc4);  
+        transform: translateX(-50%);  
+        box-shadow: 0 0 10px #00ff7f;  
+    }  
+
+    .timeline-item {  
+        position: relative;  
+        margin-bottom: 40px;  
+        width: 100%;  
+    }  
+
+    .timeline-item:nth-child(even) .timeline-content {  
+        margin-left: 0;  
+        margin-right: calc(50% + 40px);  
+        text-align: right;  
+    }  
+
+    .timeline-item:nth-child(odd) .timeline-content {  
+        margin-left: calc(50% + 40px);  
+        margin-right: 0;  
+    }  
+
+    .timeline-content {  
+        background: rgba(255,255,255,0.05);  
+        border: 1px solid rgba(207,216,220,0.1);  
+        border-radius: 12px;  
+        padding: 24px;  
+        position: relative;  
+    }  
+
+    .timeline-content h3 {  
+        display: flex;  
+        align-items: center;  
+        color: #ffd700;  
+        font-size: 1.125rem;  
+        font-weight: 700;  
+        margin-bottom: 12px;  
+    }  
+
+    .timeline-content h3::before {  
+        content: '';  
+        width: 8px;  
+        height: 8px;  
+        background: linear-gradient(135deg, #ff6b6b, #4ecdc4);  
+        border-radius: 50%;  
+        margin-left: 12px;  
+    }  
+
+    .timeline-content p {  
+        color: #cfd8dc;  
+        font-size: 1rem;  
+    }  
+
+    .timeline-point {  
+        position: absolute;  
+        left: 50%;  
+        top: 24px;  
+        width: 40px;  
+        height: 40px;  
+        background: linear-gradient(135deg, #ff6b6b, #4ecdc4);  
+        border-radius: 50%;  
+        transform: translateX(-50%);  
+        display: flex;  
+        align-items: center;  
+        justify-content: center;  
+        z-index: 2;  
+        border: 2px solid #00ff7f;  
+        box-shadow: 0 0 15px #00ff7f;  
+    }
+
+.timeline-point svg {
+width: 20px;
+height: 20px;
+fill: white;
+}
+/* ===== APPLICATIONS SECTION ===== */
+#applications {
+background: linear-gradient(135deg,#0a192f,#1a3a5d);
+padding: 60px 0;
+}
+
+.applications-row {  
+        display: flex;  
+        justify-content: center;  
+        gap: 1.5rem;  
+        margin-bottom: 1.5rem;  
+    }  
+
+    .app-box-horizontal {  
+        display: flex;  
+        background: rgba(255,255,255,0.05);  
+        padding: 0.8rem 1rem;  
+        border-radius: 15px;  
+        width: 250px;  
+        height: 120px;  
+        align-items: flex-start;  
+        text-align: left;  
+        position: relative;  
+        cursor: pointer;  
+        transition: transform 0.3s ease, box-shadow 0.3s ease;  
+    }  
+
+    .app-box-horizontal::before {  
+        content:'';  
+        position:absolute;  
+        top:0; left:0;  
+        width:5px; height:100%;  
+        background: linear-gradient(to bottom,#ff6b6b,#4ecdc4);  
+        transition: width 0.3s ease;  
+        border-radius: 15px 0 0 15px;  
+    }  
+
+    .app-box-horizontal:hover::before { width:10px; }  
+    .app-box-horizontal:hover { transform:translateY(-5px); box-shadow:0 10px 30px rgba(255,107,107,0.2); }  
+
+    .app-icon {  
+        width: 50px;  
+        height: 50px;  
+        background: rgba(78,205,196,0.2);  
+        border: 2px solid #4ecdc4;  
+        border-radius: 12px;  
+        display: flex;  
+        justify-content: center;  
+        align-items: center;  
+        font-size: 1.8rem;  
+        color: #ffd700;  
+        margin-right: 0.8rem;  
+        flex-shrink: 0;  
+        transition: transform 0.3s ease, box-shadow 0.3s ease;  
+    }  
+
+    .app-box-horizontal:hover .app-icon {  
+        transform: scale(1.2);  
+        box-shadow: 0 0 15px #4ecdc4;  
+    }  
+
+    .app-content h3.mustard {   
+        margin:0 0 0.2rem 0;   
+        font-size: 1rem;   
+        color:#ffd700;  
+    }  
+
+    .app-content p {   
+        margin:0;   
+        color:#cfd8dc;   
+        font-size:0.75rem;   
+        line-height:1.2;   
+    }  
+
+    /* Future Section */  
+     .future-section {  
+        background: linear-gradient(135deg, rgba(10, 25, 47, 0.8), rgba(26, 58, 93, 0.8));  
+        padding: 80px 0;  
+        border-top: 1px solid rgba(207,216,220,0.1);  
+        border-bottom: 1px solid rgba(207,216,220,0.1);  
+    }   
+
+    .future-content {  
+        text-align: center;  
+    }  
+
+    .future-content .title-glow {  
+        margin-bottom: 32px;  
+    }  
+
+    .future-content p {  
+        font-size: 1.25rem;  
+        color: #cfd8dc;  
+        max-width: 800px;  
+        margin: 0 auto 40px;  
+        line-height: 1.8;  
+    }  
+
+    .future-grid {  
+        display: grid;  
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));  
+        gap: 24px;  
+    }  
+
+    .future-card {  
+        background: rgba(255,255,255,0.05);  
+        border-radius: 12px;  
+        padding: 24px;  
+        border: 1px solid rgba(207,216,220,0.1);  
+    }  
+
+    .future-card h3 {  
+        font-size: 1.125rem;  
+        font-weight: 600;  
+        margin-bottom: 12px;  
+        color: #ffd700;  
+    }  
+
+    .future-card p {  
+        font-size: 0.95rem;  
+        color: #cfd8dc;  
+        line-height: 1.6;  
+    }  
+
+    /* Call to Action */  
+    .cta-section {  
+        text-align: center;  
+        padding: 80px 0;  
+    }  
+
+    .cta-content {  
+        background: linear-gradient(135deg, rgba(10, 25, 47, 0.8), rgba(26, 58, 93, 0.8));  
+        border: 1px solid rgba(207, 216, 220, 0.1);  
+        border-radius: 24px;  
+        padding: 60px;  
+        max-width: 800px;  
+        margin: 0 auto;  
+    }  
+
+    .cta-content h2 {  
+        font-size: 2.5rem;  
+        color: #ffffff;  
+        margin-bottom: 24px;  
+        text-shadow: 0 0 10px #00ff8067, 0 0 20px #00ff8079;  
+    }
+
+.cta-content p {
+font-size: 1.25rem;
+color: #cfd8dc;
+margin-bottom: 32px;
+line-height: 1.8;
+}
+.cta-button {
+background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+color: white;
+padding: 16px 48px;
+border: none;
+border-radius: 12px;
+font-size: 1.1rem;
+font-weight: 600;
+cursor: pointer;
+transition: all 0.3s ease;
+text-decoration: none;
+display: inline-block;
+box-shadow: 0 0 20px rgba(0, 255, 127, 0.3);
+}
+
+.cta-button:hover {  
+        transform: translateY(-3px);  
+        box-shadow: 0 10px 30px rgba(0, 255, 127, 0.5);  
+    }  
+
+    /* Footer */  
+    .footer {  
+        padding: 48px 0;  
+        text-align: center;  
+        border-top: 1px solid rgba(207,216,220,0.1);  
+    }  
+
+    .footer svg {  
+        width: 32px;  
+        height: 32px;  
+        fill: #00ff7f;  
+        margin-bottom: 16px;  
+        filter: drop-shadow(0 0 10px #00ff7f);  
+    }  
+
+    .footer p {  
+        color: #cfd8dc;  
+        font-size: 1rem;  
+    }  
+
+    /* Responsive Design */  
+    @media (max-width: 768px) {  
+        .header {  
+            padding: 80px 0 60px;  
+        }  
+
+        .header h1 {  
+            font-size: 2.5rem;  
+        }  
+
+        .header p {  
+            font-size: 1.25rem;  
+        }  
+
+        .hero-quote {  
+            padding: 40px 20px;  
+        }  
+
+        .hero-quote::before {  
+            font-size: 4rem;  
+        }  
+
+        .intro-content {  
+            grid-template-columns: 1fr;  
+            gap: 40px;  
+        }  
+
+        .gallery {  
+            grid-template-columns: 1fr;  
+        }  
+
+        .timeline::before {  
+            left: 24px;  
+        }  
+
+        .timeline-item:nth-child(even) .timeline-content,  
+        .timeline-item:nth-child(odd) .timeline-content {  
+            margin-left: 0;  
+            margin-right: 0;  
+            text-align: right;  
+        }  
+
+        .timeline-content {  
+            margin-left: 60px !important;  
+        }  
+
+        .timeline-point {  
+            left: 24px;  
+            transform: none;  
+        }  
+
+        .applications-row {  
+            flex-direction: column;  
+            align-items: center;  
+        }  
+
+        .app-box-horizontal {  
+            width: 280px;  
+        }  
+
+        .cta-content {  
+            padding: 40px 20px;  
+        }  
+
+        .cta-content h2 {  
+            font-size: 2rem;  
+        }  
+    }  
+
+    @media (max-width: 480px) {  
+        .header h1 {  
+            font-size: 2rem;  
+        }  
+
+        .section {  
+            padding: 60px 0;  
+        }   
+
+        .title-glow {  
+            font-size: 2rem;  
+        }  
+
+        .future-grid {  
+            grid-template-columns: 1fr;  
+        } 
+
+.main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+    }  
+</style>
+
+</head>  
+<body>  
+    <!-- Header -->  
+    <header class="header">  
+        <div class="container">  
+            
+            <h1 style="text-shadow:0 0 4px  rgb(3, 36, 44) ;">Inspiring AI Engineering</h1>  
+            
+        </div>  
+    </header>
+     <nav class="nav">
+       <!---- LEFT : LOGO + NAME -->
+        <div class="nav-left">
+        <img src="C:\Users\Assmaa\Downloads\WhatsApp Image 2025-12-08 at 18.59.26_e070c9bc.jpg" alt="Logo" class="logo">
+        <span class="brand">AI Tech</span>
+    </div>
+        </div>
+
+         <!--RIGHT : LINKS -->
+        <div class="nav-links">
+             <a href="Project.html">Home</a>
+             <a href="project.html#ai">About AI</a>
+            <a href="project.html#applications">Applications</a>
+            <a href="project.html#fields" >AI Fields</a>
+            <a href="Courses.html">Courses</a>
+            <a href="project.html#contact">Contact</a>
+        </div>
+    </nav>
+    <main class="main">  
+    <!-- Hero Quote -->  
+    
+<section class="container">  
+    <div class="hero-quote">  
+        <p>"The best way to predict the future is to invent it. AI Engineering is our canvas for that invention."</p>  
+        <div class="author" style="text-align: right;">— Inspired by Alan Kay</div>  
+    </div>  
+</section>
+
+<!-- Introduction --> 
+ 
+  <section class="section" >  
+     <div class="container" > 
+        <div class="intro-content">  
+            <div class="intro-text">  
+                <h2>What is AI Engineering?</h2>  
+                <p>AI Engineering is the art and science of building intelligent systems that can learn, adapt, and create alongside humans. It's not just about algorithms—it's about solving real human problems with thoughtful, ethical, and innovative solutions.</p>  
+                <p>At its core, AI Engineering combines technical excellence with human empathy, creating technologies that augment human potential rather than replace it.</p>  
+            </div>  
+            <div class="components-card">  
+                <h3>  
+                    Core Philosophy  
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">  
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>  
+                    </svg>  
+                </h3>  
+                <ul class="components-list">  
+                    <li>Human-Centered Design</li>  
+                    <li>Ethical AI Development</li>  
+                    <li>Continuous Learning</li>  
+                    <li>Collaborative Innovation</li>  
+                    <li>Responsible Deployment</li>  
+                </ul>  
+            </div>  
+        </div>  
+    </div>  
+
+</section>
+  <!-- Inspiration Gallery --> 
+   
+    <section class="inspiration-section">  
+    <div class="container">  
+        <div class="section-title">  
+            <h2 class="title-glow">AI in Action</h2>  
+            <p class="section-subtitle">Real-world examples that inspire the next generation of AI Engineers</p>  
+        </div>  
+        <div class="gallery">  
+            <div class="gallery-item"> 
+               
+                <div class="gallery-image1"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >  
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>  
+                    </svg> 
+                      
+                 
+                </div> 
+                <div class="gallery-content">  
+                    <h3>Medical Diagnosis AI</h3>  
+                    <p>AI systems that can detect diseases like cancer with higher accuracy than human specialists, making healthcare more accessible and precise.</p>  
+                    <div class="insight">"This AI detected a tumor that three radiologists missed, saving a patient's life."</div>  
+                </div>  
+            </div>  
+            <div class="gallery-item">  
+                <div class="gallery-image2"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">  
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>  
+                    </svg>
+                      
+                </div>  
+                <div class="gallery-content">  
+                    <h3>Climate Prediction Models</h3>  
+                    <p>Advanced AI models that predict climate patterns and help communities prepare for natural disasters and environmental changes.</p>  
+                    <div class="insight">"These predictions helped evacuate 10,000 people before a devastating flood."</div>  
+                </div>  
+            </div>  
+            <div class="gallery-item">  
+                <div class="gallery-image3"> 
+                     
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >  
+                        <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8h16v10z"/>  
+                    </svg>
+                      
+                </div>  
+                <div class="gallery-content">  
+                    <h3>Accessible Education AI</h3>  
+                    <p>Intelligent tutoring systems that personalize learning for students with different needs, making quality education available to everyone.</p>  
+                    <div class="insight">"A student with dyslexia learned to read at grade level for the first time."</div>  
+                </div>  
+            </div>  
+        </div>  
+    </div>  
+
+</section>
+  <!-- AI Engineering Types -->  
+   
+   <section class="section">  
+    <div class="container">  
+        <div class="section-title">  
+            <h2 class="title-glow">Types of AI Engineering</h2>  
+            <p class="section-subtitle">Specialized paths that make AI Engineering a diverse and exciting field</p>  
+        </div>  
+        <div class="ai-types">  
+            <div class="ai-card">  
+                <div class="ai-icon-large">🧠</div>  
+                <h3>Machine Learning Engineering</h3>  
+                <p>Design and implement ML models that can learn from data and make predictions or decisions without explicit programming.</p>  
+                <div class="stats">  
+                    <span class="stat-badge">95% accuracy</span>  
+                    <span class="stat-badge">Real-time</span>  
+                    <span class="stat-badge">Scalable</span>  
+                </div>  
+            </div>  
+            <div class="ai-card">  
+                <div class="ai-icon-large">💬</div>  
+                <h3>NLP Engineering</h3>  
+                <p>Build systems that can understand, interpret, and generate human language for applications like chatbots and translation.</p>  
+                <div class="stats">  
+                    <span class="stat-badge">100+ languages</span>  
+                    <span class="stat-badge">Context-aware</span>  
+                    <span class="stat-badge">Real-time</span>  
+                </div>  
+            </div>  
+            <div class="ai-card">  
+                <div class="ai-icon-large">👁</div>  
+                <h3>Computer Vision Engineering</h3>  
+                <p>Develop algorithms that enable machines to interpret and understand visual information from the world.</p>  
+                <div class="stats">  
+                    <span class="stat-badge">4K resolution</span>  
+                    <span class="stat-badge">Real-time processing</span>  
+                    <span class="stat-badge">99% detection</span>  
+                </div>  
+            </div>  
+            <div class="ai-card">  
+                <div class="ai-icon-large">⚡</div>  
+                <h3>AI Infrastructure Engineering</h3>  
+                <p>Design scalable infrastructure for training, deploying, and monitoring AI models in production environments.</p>  
+                <div class="stats">  
+                    <span class="stat-badge">Million requests</span>  
+                    <span class="stat-badge">99.99% uptime</span>  
+                    <span class="stat-badge">Auto-scaling</span>  
+                </div>  
+            </div>  
+        </div>  
+    </div>  
+</section>
+
+  <!-- Timeline --> 
+  
+   <section class="section">  
+    <div class="container">  
+        <div class="section-title">  
+            <h2 class="title-glow">Historical Evolution</h2>  
+            <p class="section-subtitle">The journey of AI Engineering from theoretical concepts to real-world impact</p>  
+        </div>  
+        <div class="timeline">  
+            <div class="timeline-item">  
+                <div class="timeline-point">  
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">  
+                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>  
+                    </svg>  
+                </div>  
+                <div class="timeline-content">  
+                    <h3>1956</h3>  
+                    <p>Dartmouth Conference marks the birth of Artificial Intelligence as a field</p>  
+                </div>  
+            </div>  
+            <div class="timeline-item">  
+                <div class="timeline-point">  
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">  
+                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>  
+                    </svg>  
+                </div>  
+                <div class="timeline-content">  
+                    <h3>1986</h3>  
+                    <p>Backpropagation algorithm revolutionizes neural network training</p>  
+                </div>  
+            </div>  
+            <div class="timeline-item">  
+                <div class="timeline-point">  
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">  
+                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>  
+                    </svg>  
+                </div>  
+                <div class="timeline-content">  
+                    <h3>2012</h3>  
+                    <p>AlexNet breakthrough demonstrates deep learning's power in computer vision</p>  
+                </div>  
+            </div>  
+            <div class="timeline-item">  
+                <div class="timeline-point">  
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">  
+                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>  
+                    </svg>  
+                </div>  
+                <div class="timeline-content">  
+                    <h3>2017</h3>  
+                    <p>Transformer architecture revolutionizes natural language processing</p>  
+                </div>  
+            </div>  
+            <div class="timeline-item">  
+                <div class="timeline-point">  
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">  
+                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>  
+                    </svg>  
+                </div>  
+                <div class="timeline-content">  
+                    <h3>2023</h3>  
+                    <p>Large Language Models become mainstream in enterprise applications</p>  
+                </div>  
+            </div>  
+            <div class="timeline-item">  
+                <div class="timeline-point">  
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">  
+                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>  
+                    </svg>  
+                </div>  
+                <div class="timeline-content">  
+                    <h3>2025</h3>  
+                    <p>AI Engineering becomes a standard discipline in software development</p>  
+                </div>  
+            </div>  
+        </div>  
+    </div>  
+</section>
+
+
+<!-- Applications Section -->
+
+   <section id="applications">  
+    <div class="container">  
+        <div class="section-title">  
+            <h2 class="title-glow">AI Engineering Applications</h2>  
+            <p class="section-subtitle">How AI Engineering is transforming industries and everyday life</p>  
+        </div>  
+        <div class="applications-row">  
+            <div class="app-box-horizontal">  
+                <div class="app-icon">🏥</div>  
+                <div class="app-content">  
+                    <h3 class="mustard">Healthcare</h3>  
+                    <p>Medical diagnosis, drug discovery, personalized treatment, robotic surgery</p>  
+                </div>  
+            </div>  
+            <div class="app-box-horizontal">  
+                <div class="app-icon">🚗</div>  
+                <div class="app-content">  
+                    <h3 class="mustard">Autonomous Systems</h3>  
+                    <p>Self-driving cars, drones, robotics, industrial automation</p>  
+                </div>  
+            </div>  
+        </div>  
+        <div class="applications-row">  
+            <div class="app-box-horizontal">  
+                <div class="app-icon">💼</div>  
+                <div class="app-content">  
+                    <h3 class="mustard">Business Intelligence</h3>  
+                    <p>Predictive analytics, customer insights, fraud detection, optimization</p>  
+                </div>  
+            </div>  
+            <div class="app-box-horizontal">  
+                <div class="app-icon">🌍</div>  
+                <div class="app-content">  
+                    <h3 class="mustard">Climate & Environment</h3>  
+                    <p>Climate modeling, energy optimization, wildlife conservation, disaster prediction</p>  
+                </div>  
+            </div>  
+        </div>  
+    </div>  
+</section>
+
+  <!-- Future --> 
+   
+  <section class="future-section">  
+    <div class="container">  
+        <div class="future-content">  
+            <h2 class="title-glow">Future of AI Engineering</h2>  
+            <p>As AI continues to evolve, AI Engineering will become increasingly sophisticated, focusing on creating systems that are not only intelligent but also reliable, explainable, and aligned with human values.</p>  
+            <div class="future-grid">  
+                <div class="future-card">  
+                    <h3>Responsible AI</h3>  
+                    <p>Engineering AI systems with built-in ethics, fairness, and transparency frameworks</p>  
+                </div>  
+                <div class="future-card">  
+                    <h3>AI-Human Collaboration</h3>  
+                    <p>Designing AI that augments human capabilities rather than replacing them</p>  
+                </div>  
+                <div class="future-card">  
+                    <h3>General AI Engineering</h3>  
+                    <p>Moving beyond narrow AI to systems with broader cognitive capabilities</p>  
+                </div>  
+            </div>  
+        </div>  
+    </div>  
+</section> 
+ 
+</main>
+<!-- Footer -->  
+<footer class="footer">  
+    <div class="container">  
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">  
+            <path d="M12 2L2 7v10c0 5.55 3.84 9.73 9 11 5.16-1.27 9-5.45 9-11V7l-10-5z"/>  
+        </svg>  
+        <p>Inspiring AI Engineering - Building a better future, one algorithm at a time</p>  
+    </div>  
+</footer>
+ 
+</body>  
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Courses | AI Tech</title>
+  <link rel="stylesheet" href="courses.css">
+  
+</head>
+<body>
+
+<header class="header">
+  <h1>AI Learning Courses</h1>
+  <p class="desc">
+    Our AI courses are designed to take you from beginner to advanced levels,
+    focusing on real-world skills, practical projects, and modern AI techniques.
+  </p>
+</header>
+   <nav class="nav">
+        <!-- LEFT : LOGO + NAME -- -->
+        <div class="nav-left">
+        <img src="C:\Users\Assmaa\Downloads\WhatsApp Image 2025-12-08 at 18.59.26_e070c9bc.jpg" alt="Logo" class="logo">
+        <span class="brand">AI Tech</span>
+    </div>
+        </div>
+
+         <!-- -RIGHT : LINKS - -->
+        <div class="nav-links">
+           <div class="nav-links">
+            <a href="Project.html">Home</a>
+             <a href="project.html#ai">About AI</a>
+            <a href="project.html#applications">Applications</a>
+            <a href="project.html#fields" >AI Fields</a>
+            <a href="project.html#contact">Contact</a>
+        </div>
+        </div>
+    </nav> 
+<section class="courses-section">
+  <table class="courses-table">
+    <tr>
+      <th>Course</th>
+      <th>Description</th>
+      <th>Action</th>
+    </tr>
+
+    <tr>
+      <td class="hover">Introduction to AI</td>
+      <td>AI basics, history, use cases, ethics</td>
+      <td><button   onclick="openForm('Introduction to AI',this)">Join</button></td>
+    </tr>
+
+    <tr>
+      <td class="hover">Machine Learning</td>
+      <td>Regression, classification, models</td>
+      <td><button   onclick="openForm('Machine Learning',this)">Join</button></td>
+    </tr>
+
+    <tr>
+      <td class="hover">Deep Learning</td>
+      <td>Neural Networks, CNN, RNN</td>
+      <td><button   onclick="openForm('Deep Learning',this)">Join</button></td>
+    </tr>
+
+    <tr>
+      <td class="hover">AI in Healthcare</td>
+      <td>Medical imaging, diagnostics</td>
+      <td><button  onclick="openForm('AI in Healthcare',this)">Join</button></td>
+    </tr>
+
+    <tr>
+      <td class="hover">AI for Business</td>
+      <td>Automation, analytics, decision making</td>
+      <td><button  onclick="openForm('AI for Business',this)">Join</button></td>
+    </tr>
+  </table>
+</section>
+<!-- ================= SUBSCRIPTION PLANS ================= -->
+<section class="plans-section">
+  <h2 class="plans-title">Subscription Plans</h2>
+  <p class="plans-desc">
+    Choose the plan that fits your learning goals and start your AI journey today.
+  </p>
+
+  <div class="plans-box">
+
+    <div class="plan-card">
+      
+      <h3>Basic</h3>
+      <p>✔ Access to 2 courses</p>
+      <p>✔ Community support</p>
+      <span class="price">$9.99 / month</span><br>
+      <button   onclick="openForm('Basic Plan',this)">Subscribe</button>
+    </div>
+
+    <div class="plan-card popular">
+      <h3>Standard</h3>
+      <p>✔ Access to 5 courses</p>
+      <p>✔ Projects & practice</p>
+      <p>✔ Priority support</p>
+      <span class="price">$19.99 / month</span>
+      <button  onclick="openForm('Standard Plan',this)">Subscribe</button>
+    </div>
+
+    <div class="plan-card">
+      <h3>Premium</h3>
+      <p>✔ All courses</p>
+      <p>✔ Certificates</p>
+      <p>✔ 1-to-1 mentoring</p>
+      <span class="price">$29.99 / month</span>
+      <button onclick="openForm('Premium Plan',this)">Subscribe</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- FORM -->
+<div class="form-popup" id="form">
+  <div class="form-content">
+    <span class="close" onclick="closeForm()">✖</span>
+    <h2>Course Registration</h2>
+
+    <form id="myform">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <input type="text" id="courseName" readonly>
+      <select required>
+        <option value="">Payment Method</option>
+        <option style="color: rgba(140, 11, 22, 0.851);">Credit Card</option>
+        <option style="color: rgba(134, 15, 21, 0.851);">PayPal</option>
+        <option style="color: rgba(116, 12, 31, 0.851);">Bank Transfer</option>
+      </select>
+      <button type="submit" id="submitBtn">Submit</button>
+    </form>
+  </div>
+</div>
+<script>
+let currentButton = null; //الزرار اللي اضغط عليه (Join / Subscribe)
+
+// --- فتح الفورم ---
+function openForm(course, btn) {
+  const formBox = document.getElementById("form");
+  formBox.style.display = "flex";
+
+  //حفظ الزرار بعد الضغط عليه
+  currentButton = btn;
+
+  // يظهر اسم الكورس
+  document.getElementById("courseName").value = course;
+
+  // Reset لزرار Submit
+  const submitBtn = formBox.querySelector("button[type='submit']");
+  submitBtn.textContent = "Submit";
+  submitBtn.style.background = "";
+  submitBtn.style.color = "";
+  submitBtn.disabled = false;
+}
+
+// --- قفل الفورم ---
+function closeForm() {
+  document.getElementById("form").style.display = "none";
+}
+
+// --- لما أعمل Submit ---
+document.querySelector(".form-content form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const submitBtn = this.querySelector("button[type='submit']");
+    submitBtn.textContent = "Added";
+    submitBtn.style.background = "green";
+    submitBtn.style.color = "#fff";
+    submitBtn.disabled = true;
+
+    // --- تعديل زرار Join / Subscribe ---
+    if (currentButton) {
+      currentButton.textContent = "Added";
+      currentButton.style.background = "green";
+      currentButton.style.color = "#fff";
+      currentButton.disabled = true;
+    }
+
+    setTimeout(() => {
+        closeForm();
+    }, 800);
+});
+</script>
+
+</body>
+</html>
